@@ -3,4 +3,39 @@
 
 {% block content %}
 	<h1>Add Address...</h1>
+<br/>
+	<form method="POST">
+		{% csrf_token %}
+
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Full Name" name="name">
+	  </div>
+
+	  <div class="form-group">
+	    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Addres" name="email">
+	  </div>
+	  
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Phone Number" name="phone">
+	  </div>
+
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Address" name="address">
+	  </div>
+
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="City" name="city">
+	  </div>
+
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="State" name="state">
+	  </div>
+
+	  <div class="form-group">
+	    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Zipcode" name="zipcode">
+	  </div>
+<br/>
+	  <button type="submit" class="btn btn-secondary">Add Address</button>
+	</form>
+
 {% endblock %}

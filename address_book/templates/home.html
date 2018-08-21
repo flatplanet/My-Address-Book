@@ -2,5 +2,36 @@
 
 
 {% block content %}
-	<h1>Hello World!</h1>
+
+<div class="container">
+	  <div class="row">
+
+	{% if all_addresses %}
+		{% for records in all_addresses %}
+			<div class="col-sm">
+				<div class="card" style="width: 18rem;">
+				  <div class="card-body">
+				    <h5 class="card-title">{{ records.name }}</h5>
+				    <p class="card-text">
+				    	{{ records.name }}<br/>
+						{{ records.email }}<br/>
+						{{ records.phone }}<br/>
+						{{ records.address }}<br/>
+						{{ records.city }}<br/>
+						{{ records.state }}<br/>
+						{{ records.zip }}<br/>
+				    </p>
+				    <a href="{% url 'edit' records.id %}" class="btn btn-secondary">Edit</a>
+				  </div>
+				</div>
+				<br/>
+			</div>
+
+
+			
+			
+
+		{% endfor %}
+	{% endif %}
+</div></div>
 {% endblock %}
